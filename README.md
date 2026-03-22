@@ -1,6 +1,8 @@
 # capuchin-bird-call-classification-deep-learning-project
 
-
+<p align="center">
+  <img src="Capuchin.jpg" width="30%" />
+</p>
 
 ---
 

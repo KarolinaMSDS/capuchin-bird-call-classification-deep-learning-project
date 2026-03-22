@@ -144,6 +144,14 @@ ResNet excels in:
 
 ---
 
+### Model Architecture (Custom CNN)
+
+<p align="center">
+  <img src="figures/resnet_architecture.png" width="70%" />
+</p>
+
+---
+
 ### Model Architecture (ResNet-50)
 
 <p align="center">

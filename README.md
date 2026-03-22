@@ -19,6 +19,33 @@ This project builds a **deep learning pipeline for audio classification** to det
 
 The approach demonstrates how machine learning can be applied to real-world conservation challenges, reducing reliance on manual observation and enabling continuous, non-invasive species tracking.
 
+---
+
+## 🌍 Potential Impact
+
+This project demonstrates a scalable approach to:
+
+**Wildlife Conservation**
+
+- Monitor bird populations without human intervention
+- Identify biodiversity hotspots
+
+**Environmental Research**
+
+- Track species distribution over time
+- Detect ecological changes
+
+**Automation of Audio Analysis**
+
+- Replace manual audio review with ML pipelines
+- Enable large-scale ecological monitoring
+
+**Generalization Potential**
+
+- Framework can be adapted to:
+ - Other bird species
+ - Marine mammals
+ - Bioacoustic monitoring systems
 
 ---
 
@@ -147,7 +174,7 @@ ResNet excels in:
 ### Model Architecture (Custom CNN)
 
 <p align="center">
-  <img src="figures/resnet_architecture.png" width="70%" />
+  <img src="Custom.png" width="20%" />
 </p>
 
 ---
@@ -155,21 +182,8 @@ ResNet excels in:
 ### Model Architecture (ResNet-50)
 
 <p align="center">
-  <img src="figures/resnet_architecture.png" width="70%" />
+  <img src="ResNet.png" width="70%" />
 </p>
-
----
-
-## 🌍 Impact
-
-* Enables **automated biodiversity monitoring**
-* Reduces need for manual audio analysis
-* Supports **real-time conservation decision-making**
-* Scalable to:
-
-  * Other bird species
-  * Marine bioacoustics
-  * Environmental monitoring systems
 
 ---
 

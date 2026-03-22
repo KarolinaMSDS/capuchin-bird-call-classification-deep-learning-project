@@ -78,6 +78,15 @@ https://www.kaggle.com/code/pranshavpatel/capuchinbird-audio-classification/inpu
 - Classify each segment independently
 - Aggregate predictions across time
 
+```mermaid
+flowchart LR
+A[Raw Audio] --> B[Preprocessing]
+B --> C[Resampling 16kHz]
+C --> D[STFT Spectrogram]
+D --> E[Model Training]
+E --> F[Prediction on Segments]
+F --> G[Aggregate Results]
+```
 ---
 
 ## 🧠 Models
@@ -87,12 +96,17 @@ https://www.kaggle.com/code/pranshavpatel/capuchinbird-audio-classification/inpu
 * Lightweight architecture
 * Fast training
 * Strong generalization
+* Conv2D → ReLU → MaxPooling
+* Multiple convolutional layers for feature extraction
+* Dense layers with sigmoid output
 
 ### 🔹 ResNet-50 (Transfer Learning)
 
-* Modified for spectrogram input
 * High accuracy (98.8%)
 * Higher computational cost
+* Pretrained on ImageNet
+* Modified to accept single-channel spectrograms
+* Fine-tuned for binary classification
 
 ---
 
@@ -103,6 +117,16 @@ https://www.kaggle.com/code/pranshavpatel/capuchinbird-audio-classification/inpu
 | Custom CNN | ~100%    | 1.00      | 1.00   | Fast   |
 | ResNet-50  | 98.8%    | High      | High   | Slower |
 
+**Both models perform extremely well**
+
+Custom CNN slightly outperforms in:
+ - Speed
+ - Call count estimation
+ 
+ResNet excels in:
+ 
+ - General classification accuracy
+
 ---
 
 ## 🖼️ Visualizations
@@ -110,7 +134,7 @@ https://www.kaggle.com/code/pranshavpatel/capuchinbird-audio-classification/inpu
 ### Spectrogram Comparison
 
 <p align="center">
-  <img src="figures/capuchin_spectrogram.png" width="45%" />
+  <img src="spect.png" width="80%" />
 </p>
 
 **Insight:**
@@ -125,30 +149,6 @@ https://www.kaggle.com/code/pranshavpatel/capuchinbird-audio-classification/inpu
 <p align="center">
   <img src="figures/resnet_architecture.png" width="70%" />
 </p>
-
----
-
-### Training Performance
-
-<p align="center">
-  <img src="figures/loss_curve.png" width="30%" />
-  <img src="figures/precision_curve.png" width="30%" />
-  <img src="figures/recall_curve.png" width="30%" />
-</p>
-
----
-
-## 🔄 Pipeline
-
-```mermaid
-flowchart LR
-A[Raw Audio] --> B[Preprocessing]
-B --> C[Resampling 16kHz]
-C --> D[STFT Spectrogram]
-D --> E[Model Training]
-E --> F[Prediction on Segments]
-F --> G[Aggregate Results]
-```
 
 ---
 
